@@ -1,0 +1,13 @@
+az login
+account set -s <Your subscription ID>
+account set -s 50f157c9-e6e8-4191-beb7-3de96b563d95
+az quantum workspace list
+az quantum workspace show -o table
+az quantum execute --target-id ionq.simulator
+az quantum job output -j a9d43806-7a6a-4fdc-b5a6-8db13b3310ba -o table
+
+
+Result                 Frequency
+---------------------  -----------  -------------------------
+{"Item1":0,"Item2":0}  0.25000000   ▐█████                  |
+{"Item1":1,"Item2":1}  0.75000000   ▐███████████████        |
